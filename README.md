@@ -36,7 +36,7 @@ rosrun solve_maze my_mapper
 ### Avoiding Obstacles
 The robot performs obstacle scanning to ensure the absence of LiDAR data within a specified area (a x b) in front of it. This scanning relies on angular calculations expressed as follows:
 
-![odom_png](https://github.com/fbasatemur/action_recognition/blob/main/doc/odom.png?ref_type=heads)
+![odom_png](https://github.com/fbasatemur/turtlebot3_maze_solver/blob/main/doc/odom.png?ref_type=heads)
 
 
 In Fig-1, calculations for the minimum and maximum angles required for scanning an area of size axb in front of the TurtleBot are depicted. The dimensions of the TurtleBot (turtlebot_l and turtlebot_w) are used in Fig-2 to compute the angle Q_rad_min.
@@ -84,5 +84,5 @@ obstacle_y = static_cast<int>(turtle_pos_y + odom_y[i] / scan_resolution);
 This node maps the obstacles within the labyrinth based on the environment map created according to the micromouse_maze puzzle. The map contains the positions of obstacles perceived by the TurtleBot.
 
 ### micromouse_maze1 Obstacle Map
-![maze1_png](https://github.com/fbasatemur/action_recognition/blob/main/doc/maze_1_mapper.png?ref_type=heads)
+![maze1_png](https://github.com/fbasatemur/turtlebot3_maze_solver/blob/main/doc/maze_1_mapper.png?ref_type=heads)
 
