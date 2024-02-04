@@ -1,4 +1,4 @@
-# Trutlebot3 Maze Solver & Mapper
+# Turtlebot3 Maze Solver & Mapper
 
 ## Project Description
     
