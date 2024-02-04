@@ -2,7 +2,7 @@
 
 ## Project Description
     
-In ROS1, entry-level maze solver and maze mapper nodes have been developed for TurtleBot3 in Micromouse maze environments.
+In ROS1 noetic, entry-level maze solver and maze mapper nodes have been developed for TurtleBot3 in Micromouse maze environments.
 
 The project utilizes the following ROS packages: geometry_msgs, roscpp, sensor_msgs, std_msgs, as well as OpenCV.
 
@@ -30,6 +30,13 @@ To run the solver & mapper nodes:
 rosrun solve_maze my_solver
 rosrun solve_maze my_mapper
 ```
+
+To see the mapper result in detail, you can open the Robot Steering Console by running:
+
+```bash
+rosrun rqt_gui rqt_gui
+```
+Then navigate to Plugins -> Robot Tools -> Robot Steering.
 
 ## Solver
 
