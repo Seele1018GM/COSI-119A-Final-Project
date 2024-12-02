@@ -1,9 +1,9 @@
 <launch>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
-  <arg name="x_pos" default="0.0"/>
-  <arg name="y_pos" default="0.0"/>
-  <arg name="z_pos" default="0.0"/>
-  <arg name="yaw" default="0.0"/>
+  <arg name="x_pos" default="-7.5"/>
+  <arg name="y_pos" default="-7.5"/>
+  <arg name="z_pos" default="0.05"/>
+  <arg name="yaw" default="1.5708"/> 
   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find micromouse_maze)/worlds/maze1.world"/>
@@ -20,7 +20,7 @@
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -Y $(arg yaw) -param robot_description" />
   
   
-  <node pkg="micromouse_maze" type="random_pose.py" name="random_pose"/>
+  <!-- <node pkg="micromouse_maze" type="random_pose.py" name="random_pose"/> -->
   
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
     <param name="publish_frequency" type="double" value="50.0" />
