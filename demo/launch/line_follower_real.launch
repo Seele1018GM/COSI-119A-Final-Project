@@ -1,0 +1,14 @@
+<launch>
+    <!-- Start the camera node (e.g., Raspberry Pi camera) -->
+    <node name="camera_node" pkg="raspicam_node" type="raspicam_node" output="screen">
+        <param name="camera_frame_id" value="raspicam"/>
+        <param name="image_width" value="640"/>
+        <param name="image_height" value="480"/>
+        <param name="image_format" value="jpeg"/>
+    </node>
+
+    <!-- Start the line follower node -->
+    <node name="line_follower_real" pkg="demo" type="line_follower_real.py" output="screen">
+        <param name="use_sim_time" value="false"/>
+    </node>
+</launch>
